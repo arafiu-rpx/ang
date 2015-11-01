@@ -1,0 +1,17 @@
+<div class="container">
+  <div>
+    <select name="singleSelect" ng-model="main.selectionValues.x">
+      <option ng-repeat="option in main.availableXOptions" ng-selected="option.value == main.selectionValues.x" value="{{option.value}}"> {{option.name}} </option>
+    </select>
+    <select name="singleSelect" ng-model="main.selectionValues.y">
+      <option ng-repeat="option in main.availableYOptions"  ng-selected="option.value == main.selectionValues.y" value="{{option.value}}"> {{option.name}} </option>
+    </select>
+    <select name="singleSelect" ng-model="main.selectionValues.size">
+      <option ng-repeat="option in main.availableSizeOptions"  ng-selected="option.value == main.selectionValues.size" value="{{option.value}}"> {{option.name}} </option>
+    </select>
+    <select name="singleSelect" ng-model="main.selectionValues.color">
+      <option ng-repeat="option in main.availableColorOptions"  ng-selected="option.value == main.selectionValues.color" value="{{option.value}}"> {{option.name}} </option>
+    </select>
+    <div id="chart1" highcharts="main.chartOptions" ng-if="main.chartLoaded"></div>
+  </div>
+</div>
